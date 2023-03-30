@@ -60,6 +60,9 @@ const { createApp } = Vue
         }
         this.todoList.unshift(this.newTodo)
         this.newTodo = ''
+    },
+    changeDone(){
+       
     }
    },
    mounted(){
