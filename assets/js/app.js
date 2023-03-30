@@ -62,10 +62,16 @@ const { createApp } = Vue
         this.newTodo = ''
     },
     changeDone(){
-       
+       this.todoList.forEach(todo => {
+        if (todo.done === true) {
+            todo.done = false
+        } else {
+            todo.done = true
+        }
+    });
     }
    },
    mounted(){
-
+    
    }
 }).mount('#app')
