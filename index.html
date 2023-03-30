@@ -22,10 +22,19 @@
 
     <div id="app">
         <main>
-            <div class="container">
-                <h1>Todo List</h1>
-                <ul>
-                    <li :class="todo.done ? '' : 'todo'" v-for="todo in todoList">{{todo.text}}</li>
+            <div class="container w-50">
+                <h1 class="py-3">Todo List</h1>
+                <ul class="card py-2 shadow-lg">
+                    <li class="d-flex mb-2" :class="todo.done ? '' : 'todo'" v-for="(todo, index) in todoList">
+                        {{todo.text}}
+                        <button class="btn btn-outline-dark ms-3" @click="removeTodo(index)">
+                            <i class="fa-solid fa-xmark"></i> 
+                        </button>
+                    </li>
+                    <strong class="text-center py-2" v-if="todoList.length < 1">
+                        Nothing todo
+                        <i class="fa-solid fa-face-smile-wink"></i>
+                    </strong>
                 </ul>
             </div>
         </main>
