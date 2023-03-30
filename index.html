@@ -27,7 +27,7 @@
             <div class="container w-50">
                 <h1 class="py-3">Todo List</h1>
                 <div class="add_todo form-control">
-                    <input class="me-2 " type="text" placeholder="Insert new todo item" v-model.trim="newTodo">
+                    <input class="me-2 " type="text" placeholder="Insert new todo item" v-model.trim="newTodo" @keyup.enter="addTodo()">
                     <input type="submit" value="Add" @click="addTodo()">
                 </div>
                 <!-- /add todo -->
