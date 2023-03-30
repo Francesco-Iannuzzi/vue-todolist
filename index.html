@@ -27,7 +27,7 @@
             <div class="container w-50">
                 <h1 class="py-3">Todo List</h1>
                 <div class="add_todo form-control">
-                    <input class="me-2 " type="text" placeholder="Insert new todo item" v-model="newTodo">
+                    <input class="me-2 " type="text" placeholder="Insert new todo item" v-model.trim="newTodo">
                     <input type="submit" value="Add" @click="addTodo()">
                 </div>
                 <!-- /add todo -->
@@ -42,7 +42,7 @@
                     </li>
                     <!-- /todo item -->
 
-                    <strong class="text-center py-2" v-if="todoList.length < 1">
+                    <strong class="text-center py-2" v-if="todoList.length === 0">
                         Nothing todo
                         <i class="fa-solid fa-face-smile-wink"></i>
                     </strong>
