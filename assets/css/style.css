@@ -1,0 +1,4 @@
+li:not(.todo)
+{
+    text-decoration:line-through;
+}
