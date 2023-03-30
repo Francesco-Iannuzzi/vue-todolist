@@ -38,8 +38,8 @@
 
                 <ul class="card py-2 shadow-lg">
 
-                    <li class="d-flex mb-2" :class="todo.done ? '' : 'todo'" v-for="(todo, index) in todoList" @click="changeDone(index)">
-                        {{todo.text}}
+                    <li class="d-flex mb-2" :class="todo.done ? '' : 'todo'" v-for="(todo, index) in todoList">
+                        <span @click="changeDone(index)">{{todo.text}}</span>
                         <button class="btn btn-outline-dark ms-3" @click="removeTodo(index)">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
